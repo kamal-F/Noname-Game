@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class RightShoot extends Tembakan
 {
+   public RightShoot(){
+       setImage("shoot.png");
+   }
+    
     /**
      * Act - do whatever the RightShoot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

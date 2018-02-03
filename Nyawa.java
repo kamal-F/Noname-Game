@@ -15,8 +15,10 @@ public class Nyawa extends Actor
     int nyawa = 0;
     
     public void act()   
-    {    
-        int nyawa = ((Player)getWorld().getObjects(Player.class).get(0)).getScore();
-        setImage(new GreenfootImage("Nyawa Jatuh: " + nyawa +" ", 20, Color.WHITE, Color.BLACK));
+    {   
+        try{
+            int nyawa = ((Player)getWorld().getObjects(Player.class).get(0)).getScore();
+            setImage(new GreenfootImage("Nyawa Jatuh: " + nyawa +" ", 20, Color.WHITE, Color.BLACK));
+        } catch(Exception e){}
     }
 }

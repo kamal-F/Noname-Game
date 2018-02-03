@@ -16,6 +16,7 @@ public class Thanks extends World
     public Thanks()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(960, 540, 1); 
+        super(960, 540, 1);
+        setBackground("winbg.png");
     }
 }

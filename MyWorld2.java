@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld2 extends World
 {
 
+    GreenfootSound backgroundMusic = new GreenfootSound("background.mp3");
     /**
      * Constructor for objects of class MyWorld2.
      * 
@@ -18,6 +19,7 @@ public class MyWorld2 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(960,540, 1); 
         prepare();
+        setBackground("level2.jpg");
     }
 
     /**
@@ -101,17 +103,17 @@ public class MyWorld2 extends World
         block2x2nocode10.setLocation(797,526);
         Block2x2nocode block2x2nocode23232 = new Block2x2nocode();
         addObject(block2x2nocode23232,716,314);
-        Button button = new Button();
-        addObject(button,107,453);
-        UP up = new UP();
-        addObject(up,812,373);
-        right right = new right();
-        addObject(right,904,473);
-        Left left = new Left();
-        addObject(left,751,477);
-        left.setLocation(753,469);
-        left.setLocation(754,475);
-        button.setLocation(110,447);
-        up.setLocation(228,447);
+        
+        Joystick joystick = new Joystick();
+        addObject(joystick,863,338);
+    }
+    
+    public void started(){
+        backgroundMusic.playLoop();
+        backgroundMusic.setVolume(50);
+    }
+    
+    public void stopped(){
+        backgroundMusic.stop();
     }
 }

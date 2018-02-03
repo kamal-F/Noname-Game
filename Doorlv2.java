@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Doorlv2 extends Actor
 {
+    public Doorlv2(){
+        setImage("door_closed.jpg");
+    }
+    
     /**
      * Act - do whatever the Doorlv2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

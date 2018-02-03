@@ -20,6 +20,8 @@ public class MyWorld extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(960, 540, 1); 
         prepare();
+        started();
+        setBackground("level1.png");
 
     }
  
@@ -66,21 +68,18 @@ public class MyWorld extends World
         addObject(block2x2nocode17,730,180);
         Nyawa nyawa = new Nyawa();
         addObject(nyawa,732,23);
-
-        backgroundMusic.playLoop();
-        backgroundMusic.setVolume(50);
-        Button button = new Button();
-        addObject(button,107,453);
-        UP up = new UP();
-        addObject(up,812,373);
-        right right = new right();
-        addObject(right,904,473);
-        Left left = new Left();
-        addObject(left,751,477);
-        left.setLocation(753,469);
-        left.setLocation(754,475);
-        button.setLocation(110,447);
-        up.setLocation(228,447);
+        
+        Joystick joystick = new Joystick();
+        addObject(joystick,863,338);
     }
     
+    public void started(){
+        backgroundMusic.playLoop();
+        backgroundMusic.setVolume(50);
+        Greenfoot.setSpeed(55);
+    }
+    
+    public void stopped(){
+        backgroundMusic.stop();
+    }
 }

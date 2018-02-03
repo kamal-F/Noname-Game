@@ -16,8 +16,9 @@ public class Menu extends World
     public Menu()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(960, 540, 1); 
-        prepare();
+        super(960, 540, 1);
+        setBackground("menu1.png");
+        prepare();        
     }
 
     /**
@@ -31,6 +32,6 @@ public class Menu extends World
         play.setLocation(485,360);
         Tutorial tutorial = new Tutorial();
         addObject(tutorial,490,428);
-        tutorial.setLocation(484,423);
+        tutorial.setLocation(484,423);        
     }
 }

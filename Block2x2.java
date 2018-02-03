@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Block2x2 extends Platform
 {
+    public Block2x2(){
+        setImage("tile 2 lv1.png");
+    }
+    
     /**
      * Act - do whatever the Block2x2 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

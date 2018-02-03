@@ -8,10 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MonsterKunci extends Pemain
 {
-    /**
-     * Act - do whatever the MonsterKunci wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
    int frame = 0;
     private int animationCount;
     private int vSpeed = 0;
@@ -33,6 +29,14 @@ public class MonsterKunci extends Pemain
     GreenfootImage monster2r = new GreenfootImage("monster2r.png");
     GreenfootImage monster3r = new GreenfootImage("monster3r.png");
     GreenfootImage monster4r = new GreenfootImage("monster4r.png");
+    
+    public MonsterKunci(){
+        setImage("monster1l.png");
+        spriteHeight = getImage().getHeight();
+        spriteWidth = getImage().getWidth();
+        lookForGroundDistance = (int)spriteHeight/2;
+        lookForEdge = (int)spriteWidth/2;
+    }
     
     public void act() 
     {

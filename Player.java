@@ -31,6 +31,10 @@ public class Player extends Actor
     private int frame = 1;
     private int animationCounter = 0;
 
+    public Player(){
+        setImage("p0.png");
+    }
+    
     /**
      * Act - do whatever the Player wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -38,9 +42,7 @@ public class Player extends Actor
     public void act() 
     {
         checkKey();
-        checkFall();
-        shooting();
-        shootingTouch();
+        checkFall();        
         platformAbove();
         checkRightWalls();
         checkLeftWalls();
@@ -85,31 +87,32 @@ public class Player extends Actor
     {
         if(Greenfoot.isKeyDown("right"))
         {
-            direction = 1;
             moveRight();
         }
         if(Greenfoot.isKeyDown("left"))
         {
-            direction = -1;
             moveLeft();
         }
         if(Greenfoot.isKeyDown("up") && jumping == false)
         {
             jump();
         }
+        if(Greenfoot.isKeyDown("space")){
+            shooting();
+        }
         
     }
 
     public boolean shooting()
     {
-        if(Greenfoot.isKeyDown("space") && shootingCounter <= 0 && direction ==1)
+        if(shootingCounter <= 0 && direction ==1)
         {
             getWorld().addObject(new RightShoot(), getX(), getY());
             shootingCounter = 20;
             Greenfoot.playSound("pistol.wav");
             return true;
         }
-        if(Greenfoot.isKeyDown("space") && shootingCounter <= 0 && direction ==-1)
+        if(shootingCounter <= 0 && direction ==-1)
         {
             getWorld().addObject(new LeftShoot(), getX(), getY());
             shootingCounter = 20;
@@ -118,29 +121,10 @@ public class Player extends Actor
         }
         return false;
     }
-    
-    public boolean shootingTouch()
-    {
-        boolean touch = getWorld().getObjects(Button.class).get(0).getTouch();
-        if(touch == true && shootingCounter <= 0 && direction ==1)
-        {
-            getWorld().addObject(new RightShoot(), getX(), getY());
-            shootingCounter = 20;
-            Greenfoot.playSound("pistol.wav");
-            return true;
-        }
-        if(touch == true && shootingCounter <= 0 && direction ==-1)
-        {
-            getWorld().addObject(new LeftShoot(), getX(), getY());
-            shootingCounter = 20;
-            Greenfoot.playSound("pistol.wav");
-            return true;
-        }
-        return false;
-    }
-
+        
     public void moveRight()
     {
+        direction = 1;
         setLocation(getX()+speed, getY());
         if(animationCounter % 4 == 0)
         {
@@ -173,6 +157,7 @@ public class Player extends Actor
 
     public void moveLeft()
     {
+        direction = -1;
         setLocation(getX()-speed, getY());
         if(animationCounter %4 == 0)
         {

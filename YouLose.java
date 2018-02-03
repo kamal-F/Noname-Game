@@ -8,6 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class YouLose extends TulisanGame
 {
+    public YouLose(){
+        setImage("youlose.png");
+    }
+    
     /**
      * Act - do whatever the YouLose wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
