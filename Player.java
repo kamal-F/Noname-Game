@@ -4,7 +4,7 @@ import greenfoot.*;
  * Write a description of class Player here.
  * 
  * @author Dirga Brajamusti Naufal Fakhri
- * @version 1.1
+ * @version 1.11
  */
 public class Player extends Actor
 {
@@ -107,14 +107,15 @@ public class Player extends Actor
     {
         if(shootingCounter <= 0 && direction ==1)
         {
-            getWorld().addObject(new RightShoot(), getX(), getY());
+            getWorld().addObject(new RightShoot(), getX()+4, getY()-4);
             shootingCounter = 20;
             Greenfoot.playSound("pistol.wav");
             return true;
         }
+        
         if(shootingCounter <= 0 && direction ==-1)
         {
-            getWorld().addObject(new LeftShoot(), getX(), getY());
+            getWorld().addObject(new LeftShoot(), getX()+4, getY()-4);
             shootingCounter = 20;
             Greenfoot.playSound("pistol.wav");
             return true;
