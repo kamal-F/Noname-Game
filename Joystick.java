@@ -9,8 +9,9 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Joystick extends Actor
 {
     public Joystick(){
-        setImage("fire1.png");    
+        setImage("fire3.png");    
     }
+    
     /**
      * Act - do whatever the JoyAll wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.

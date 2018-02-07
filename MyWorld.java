@@ -76,7 +76,7 @@ public class MyWorld extends World
     public void started(){
         backgroundMusic.playLoop();
         backgroundMusic.setVolume(50);
-        Greenfoot.setSpeed(55);
+        //Greenfoot.setSpeed(55);
     }
     
     public void stopped(){
