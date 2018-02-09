@@ -109,7 +109,7 @@ public class Player extends Actor
         {
             getWorld().addObject(new RightShoot(), getX()+4, getY()-4);
             shootingCounter = 20;
-            Greenfoot.playSound("pistol.wav");
+            // Greenfoot.playSound("pistol.wav");
             return true;
         }
         
@@ -117,7 +117,7 @@ public class Player extends Actor
         {
             getWorld().addObject(new LeftShoot(), getX()+4, getY()-4);
             shootingCounter = 20;
-            Greenfoot.playSound("pistol.wav");
+            // Greenfoot.playSound("pistol.wav");
             return true;
         }
         return false;

@@ -10,6 +10,7 @@ public class RightShoot extends Tembakan
 {
    public RightShoot(){
        setImage("shoot.png");
+       Greenfoot.playSound("pistol1.wav");
    }
     
     /**

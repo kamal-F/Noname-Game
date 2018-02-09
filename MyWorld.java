@@ -14,7 +14,7 @@ public class MyWorld extends World
      * 
      */
     
-    GreenfootSound backgroundMusic = new GreenfootSound("background.mp3");
+    GreenfootSound backgroundMusic = new GreenfootSound("background.wav");
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -75,7 +75,7 @@ public class MyWorld extends World
     
     public void started(){
         backgroundMusic.playLoop();
-        backgroundMusic.setVolume(50);
+        backgroundMusic.setVolume(90);
         //Greenfoot.setSpeed(55);
     }
     
