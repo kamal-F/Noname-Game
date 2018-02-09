@@ -21,7 +21,7 @@ public class MyWorld extends World
         super(960, 540, 1); 
         prepare();
         started();
-        setBackground("level1.png");
+        setBackground("level1.jpg");
 
     }
  
