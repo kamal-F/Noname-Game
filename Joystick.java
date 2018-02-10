@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Joystick extends Actor
 {
     public Joystick(){
-        setImage("fire3.png");    
+        setImage("fire3_reva.png");    
     }
     
     /**
