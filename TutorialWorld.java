@@ -29,6 +29,6 @@ public class TutorialWorld extends World
     {
         Back back = new Back();
         addObject(back,83,507);
-        back.setLocation(79,496);
+        back.setLocation(886,502);
     }
 }
