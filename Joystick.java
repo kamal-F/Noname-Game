@@ -4,10 +4,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * Write a description of class JoyAll here.
  * 
  * @author kamal_F 
- * @version v1
+ * @update D.Irga B. Naufal Fakhri
+ * @version v1.2
  */
 public class Joystick extends Actor
 {
+    boolean mouseDown;
     public Joystick(){
         setImage("fire3_reva.png");    
     }
@@ -19,7 +21,13 @@ public class Joystick extends Actor
     public void act() 
     {
         // Add your action code here.
-        if(Greenfoot.mouseDragged(this) || Greenfoot.mouseClicked(this)){
+        if(Greenfoot.mousePressed(this)){
+            mouseDown = true;  
+        }else if(Greenfoot.mouseClicked(this)){ 
+            mouseDown = false; 
+        }
+        
+        if(Greenfoot.mouseDragged(this) || mouseDown == true){
             MouseInfo m = Greenfoot.getMouseInfo();
             int mX = m.getX();
             int mY = m.getY();

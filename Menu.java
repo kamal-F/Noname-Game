@@ -33,5 +33,10 @@ public class Menu extends World
         Tutorial tutorial = new Tutorial();
         addObject(tutorial,490,428);
         tutorial.setLocation(484,423);        
+        About about = new About();
+        addObject(about,493,487);
+        about.setLocation(486,479);
+        tutorial.setLocation(484,418);
+        about.setLocation(486,474);
     }
 }
