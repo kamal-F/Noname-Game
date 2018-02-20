@@ -1,24 +1,24 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class TutorialWorld here.
+ * Write a description of class AboutWorld here.
  * 
- * @author Dirga Brajamusti Naufal Fakhri
- * @version 1.1
+ * @author (your name) 
+ * @version (a version number or a date)
  */
-public class TutorialWorld extends World
+public class AboutWorld extends World
 {
 
     /**
-     * Constructor for objects of class TutorialWorld.
+     * Constructor for objects of class AboutWorld.
      * 
      */
-    public TutorialWorld()
+    public AboutWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(960, 540, 1); 
+        super(960, 540, 1);
+        setBackground("about.jpg");
         prepare();
-        setBackground("tutorial.jpg");
     }
 
     /**
@@ -28,7 +28,7 @@ public class TutorialWorld extends World
     private void prepare()
     {
         Back back = new Back();
-        addObject(back,83,507);
-        back.setLocation(886,502);
+        addObject(back,87,505);
+        back.setLocation(76,497);
     }
 }

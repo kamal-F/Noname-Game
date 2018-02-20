@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class MyWorld2 extends World
 {
 
-    GreenfootSound backgroundMusic = new GreenfootSound("background.mp3");
+    GreenfootSound backgroundMusic = new GreenfootSound("background.wav");
     /**
      * Constructor for objects of class MyWorld2.
      * 
@@ -19,6 +19,7 @@ public class MyWorld2 extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(960,540, 1); 
         prepare();
+        started();
         setBackground("level2.jpg");
     }
 

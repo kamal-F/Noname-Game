@@ -40,8 +40,8 @@ public class MyWorld extends World
         addObject(new Block2x2nocode(),576,268);
         addObject(new Block2x2nocode(),640,268);
         addObject(new Block2x2nocode(),202,289);
-        addObject(new Block2x2nocode(),31,234);
-        addObject(new Block2x2nocode(),95,234);
+        addObject(new Block2x2nocode(),33,234);
+        addObject(new Block2x2nocode(),97,234);
         addObject(new Block2x22(),435,222);
         addObject(new Block2x2nocode(),343,132);
         addObject(new Block2x2nocode(),279,132);

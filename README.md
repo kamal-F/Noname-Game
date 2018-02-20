@@ -6,7 +6,7 @@ Noname Game
 
 PURPOSE OF PROJECT: Collage Project
 
-VERSION or DATE: 1.1
+VERSION or DATE: 1.2
 
 HOW TO START THIS PROJECT: Just new Menu and then Play
 
@@ -16,3 +16,4 @@ USER INSTRUCTIONS: Read Tutorial
 
 * D.Irga B. Naufal Fakhri
 * kamal-F
+* Bakti Qilan Mufid
